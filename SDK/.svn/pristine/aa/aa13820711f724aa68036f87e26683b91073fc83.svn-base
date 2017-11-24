@@ -1,0 +1,87 @@
+﻿/// -------------------------------------------------------------------------------------------
+/// FileName：FileInformation.cs
+/// 说    明：文件信息定义类
+/// Version ：1.0
+/// Date    ：2017/5/26
+/// Author  ：CaoKai
+/// -------------------------------------------------------------------------------------------
+
+namespace CitFileSDK
+{
+    /// <summary>
+    /// 文件信息定义类
+    /// </summary>
+    public class FileInformation
+    {
+        /// <summary>
+        /// 文件类型 iDataType：1轨检、2动力学、3弓网----4个字节
+        /// </summary>
+        public int iDataType { get ; set; }
+
+        /// <summary>
+        /// 文件版本号，用X.X.X表示 第一位大于等于3代表加密后,只加密数据块部分---1+20个字节，第一个字节表示实际长度，以下类同
+        /// </summary>
+        public string sDataVersion { get; set; }
+
+        /// <summary>
+        /// 线路代码，同PWMIS----1+4个字节
+        /// </summary>
+        public string sTrackCode { get; set; }
+
+        /// <summary>
+        /// 线路名  英文最好---1+20个字节
+        /// </summary>
+        public string sTrackName { get; set; }
+
+        /// <summary>
+        /// 行别：1上行、2下行、3单线----4个字节
+        /// </summary>
+        public int iDir { get; set; }
+
+        /// <summary>
+        /// 检测车号，不足补空格---1+20个字节
+        /// </summary>
+        public string sTrain { get; set; }
+
+        /// <summary>
+        /// 检测日期：yyyy-MM-dd---1+10个字节
+        /// </summary>
+        public string sDate { get; set; }
+
+        /// <summary>
+        /// 检测起始时间：HH:mm:ss---1+8个字节
+        /// </summary>
+        public string sTime { get; set; }
+
+        /// <summary>
+        /// 检测方向，正0，反1----4个字节
+        /// </summary>
+        public int iRunDir { get; set; }
+
+        /// <summary>
+        /// 增里程0，减里程1----4个字节
+        /// </summary>
+        public int iKmInc { get; set; }
+
+        /// <summary>
+        /// 开始里程----4个字节
+        /// </summary>
+        public float fkmFrom { get; set; }
+
+        /// <summary>
+        /// 结束里程，检测结束后更新----4个字节
+        /// </summary>
+        public float fkmTo { get; set; }
+
+        /// <summary>
+        /// 采样数，距离采样>0, 时间采样小于0 ----4个字节
+        /// </summary>
+        public int iSmaleRate { get; set; }
+
+        /// <summary>
+        /// 数据块中通道总数----4个字节
+        /// </summary>
+        public int iChannelNumber { get; set; }
+
+    }
+}

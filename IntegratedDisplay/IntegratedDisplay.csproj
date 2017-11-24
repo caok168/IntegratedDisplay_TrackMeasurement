@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A4B2FB1-E468-47A8-BB85-26C9FB68476D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntegratedDisplay</RootNamespace>
+    <AssemblyName>IntegratedDisplay</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IntegratedDisplay.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>wave.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.20.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.3.20.0\lib\net40\MathNet.Numerics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.11\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoTranslationClass.cs" />
+    <Compile Include="ChannelManager.cs" />
+    <Compile Include="CommControl.cs" />
+    <Compile Include="ConfigManger.cs" />
+    <Compile Include="Controls\CommonConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CommonConfigControl.Designer.cs">
+      <DependentUpon>CommonConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NetworkConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NetworkConfigControl.Designer.cs">
+      <DependentUpon>NetworkConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StandardConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StandardConfig.Designer.cs">
+      <DependentUpon>StandardConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StandardConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StandardConfigControl.Designer.cs">
+      <DependentUpon>StandardConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewAutoFilter\DataGridViewAutoFilterColumnHeaderCell.cs" />
+    <Compile Include="DataGridViewAutoFilter\DataGridViewAutoFilterTextBoxColumn.cs" />
+    <Compile Include="DBOperator.cs" />
+    <Compile Include="Forms\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountInfoForm.Designer.cs">
+      <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AutoIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AutoIndexForm.Designer.cs">
+      <DependentUpon>AutoIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CaptureScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CaptureScreenForm.Designer.cs">
+      <DependentUpon>CaptureScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChannelsConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChannelsConfigDialog.Designer.cs">
+      <DependentUpon>ChannelsConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChannelsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChannelsDialog.Designer.cs">
+      <DependentUpon>ChannelsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChartConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChartConfigForm.Designer.cs">
+      <DependentUpon>ChartConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CorrelationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CorrelationForm.Designer.cs">
+      <DependentUpon>CorrelationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportDataByBoundaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportDataByBoundaryForm.Designer.cs">
+      <DependentUpon>ExportDataByBoundaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExportDataByMileageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExportDataByMileageForm.Designer.cs">
+      <DependentUpon>ExportDataByMileageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Geo2CitConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Geo2CitConvertForm.Designer.cs">
+      <DependentUpon>Geo2CitConvertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IICDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IICDataForm.Designer.cs">
+      <DependentUpon>IICDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IICViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IICViewForm.Designer.cs">
+      <DependentUpon>IICViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndexForm.Designer.cs">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IndexMainInfoAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IndexMainInfoAddForm.Designer.cs">
+      <DependentUpon>IndexMainInfoAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvalidDataAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvalidDataAddForm.Designer.cs">
+      <DependentUpon>InvalidDataAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvalidDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvalidDataForm.Designer.cs">
+      <DependentUpon>InvalidDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InvalidDataStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvalidDataStatisticsForm.Designer.cs">
+      <DependentUpon>InvalidDataStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelInfoAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelInfoAddForm.designer.cs">
+      <DependentUpon>LabelInfoAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelInfoForm.designer.cs">
+      <DependentUpon>LabelInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayerControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LayerControlForm.Designer.cs">
+      <DependentUpon>LayerControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayerTranslationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LayerTranslationForm.Designer.cs">
+      <DependentUpon>LayerTranslationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MeterageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MeterageForm.Designer.cs">
+      <DependentUpon>MeterageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MileageLocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MileageLocationForm.Designer.cs">
+      <DependentUpon>MileageLocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectLineNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectLineNameForm.Designer.cs">
+      <DependentUpon>SelectLineNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SingleChannelConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SingleChannelConfigForm.Designer.cs">
+      <DependentUpon>SingleChannelConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ToolstipConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ToolstipConfigForm.Designer.cs">
+      <DependentUpon>ToolstipConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IICDataManager.cs" />
+    <Compile Include="IICDataViewManager.cs" />
+    <Compile Include="IICDataReviseMananger.cs" />
+    <Compile Include="InvalidDataManager.cs" />
+    <Compile Include="LabelInfoManager.cs" />
+    <Compile Include="ListviewSortHelper\ListViewHelper.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OpenFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenFileForm.Designer.cs">
+      <DependentUpon>OpenFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountDatabase.cs" />
+    <Compile Include="Models\AccountInfo.cs" />
+    <Compile Include="Models\AccountTotalData.cs" />
+    <Compile Include="Models\AccountTableInfo.cs" />
+    <Compile Include="Models\AutoIndex.cs" />
+    <Compile Include="Models\CDL.cs" />
+    <Compile Include="Models\ChannelsClass.cs" />
+    <Compile Include="Models\ChartConfig.cs" />
+    <Compile Include="Models\ConfigData.cs" />
+    <Compile Include="Models\cPointFindMeter.cs" />
+    <Compile Include="Models\Defects.cs" />
+    <Compile Include="Models\ExceptionType.cs" />
+    <Compile Include="Models\IndexOri.cs" />
+    <Compile Include="Models\IndexSta.cs" />
+    <Compile Include="Models\InvalidData.cs" />
+    <Compile Include="Models\LabelInfo.cs" />
+    <Compile Include="Models\FormlayoutConfig.cs" />
+    <Compile Include="Models\LayerConfigData.cs" />
+    <Compile Include="Models\StandardChangeItem.cs" />
+    <Compile Include="Models\StatisticsData.cs" />
+    <Compile Include="Models\TQI.cs" />
+    <Compile Include="Models\TQIMile.cs" />
+    <Compile Include="Models\WaveformData.cs" />
+    <Compile Include="Models\WaveformDragData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WaveDisplayConfigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\WaveDisplayConfigControl.Designer.cs">
+      <DependentUpon>WaveDisplayConfigControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolStripRender.cs" />
+    <Compile Include="WaveformMaker.cs" />
+    <Content Include="wave.ico" />
+    <EmbeddedResource Include="Controls\CommonConfigControl.resx">
+      <DependentUpon>CommonConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NetworkConfigControl.resx">
+      <DependentUpon>NetworkConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StandardConfig.resx">
+      <DependentUpon>StandardConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StandardConfigControl.resx">
+      <DependentUpon>StandardConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountInfoForm.resx">
+      <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AutoIndexForm.resx">
+      <DependentUpon>AutoIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CaptureScreenForm.resx">
+      <DependentUpon>CaptureScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChannelsConfigDialog.resx">
+      <DependentUpon>ChannelsConfigDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChannelsDialog.resx">
+      <DependentUpon>ChannelsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChartConfigForm.resx">
+      <DependentUpon>ChartConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CorrelationForm.resx">
+      <DependentUpon>CorrelationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportDataByBoundaryForm.resx">
+      <DependentUpon>ExportDataByBoundaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExportDataByMileageForm.resx">
+      <DependentUpon>ExportDataByMileageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Geo2CitConvertForm.resx">
+      <DependentUpon>Geo2CitConvertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IICDataForm.resx">
+      <DependentUpon>IICDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IICViewForm.resx">
+      <DependentUpon>IICViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndexForm.resx">
+      <DependentUpon>IndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IndexMainInfoAddForm.resx">
+      <DependentUpon>IndexMainInfoAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvalidDataAddForm.resx">
+      <DependentUpon>InvalidDataAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvalidDataForm.resx">
+      <DependentUpon>InvalidDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvalidDataStatisticsForm.resx">
+      <DependentUpon>InvalidDataStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelInfoAddForm.resx">
+      <DependentUpon>LabelInfoAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelInfoForm.resx">
+      <DependentUpon>LabelInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayerControlForm.resx">
+      <DependentUpon>LayerControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayerTranslationForm.resx">
+      <DependentUpon>LayerTranslationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MeterageForm.resx">
+      <DependentUpon>MeterageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MileageLocationForm.resx">
+      <DependentUpon>MileageLocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectLineNameForm.resx">
+      <DependentUpon>SelectLineNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SingleChannelConfigForm.resx">
+      <DependentUpon>SingleChannelConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ToolstipConfigForm.resx">
+      <DependentUpon>ToolstipConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenFileForm.resx">
+      <DependentUpon>OpenFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\WaveDisplayConfigControl.resx">
+      <DependentUpon>WaveDisplayConfigControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CitIndexFileSDK\CitIndexFileSDK.csproj">
+      <Project>{f7456540-0552-4576-9a39-1af4d3aeb497}</Project>
+      <Name>CitIndexFileSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonFileSDK\CommonFileSDK.csproj">
+      <Project>{f05d691e-ccdb-4858-9ed7-4c9dbfef5fb6}</Project>
+      <Name>CommonFileSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeoFileProcess\GeoFileProcess.csproj">
+      <Project>{95e81d09-d0b1-48bf-a0e1-0b2fdf5f721c}</Project>
+      <Name>GeoFileProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SDK\CitFileProcess\CitFileSDK.csproj">
+      <Project>{A5EAC8D9-113B-4329-A6DD-BB3501C96CF7}</Project>
+      <Name>CitFileSDK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wave2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

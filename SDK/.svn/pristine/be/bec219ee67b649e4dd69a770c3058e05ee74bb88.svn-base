@@ -1,0 +1,43 @@
+﻿
+namespace CitFileSDK
+{
+    public class Encryption
+    {
+        public static byte Translate(byte b)
+        {
+            return new byte();
+        }
+
+        /// <summary>
+        /// 解析字节
+        /// </summary>
+        /// <param name="bTranslateData"></param>
+        /// <returns></returns>
+        public static byte[] Translate(byte[] bTranslateData)
+        {
+            for (int iIndex = 0; iIndex < bTranslateData.Length; iIndex++)
+            {
+                bTranslateData[iIndex] = (byte)(bTranslateData[iIndex] ^ 128);
+            }
+            return bTranslateData;
+        }
+
+        /// <summary>
+        /// 判断是否加密
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
+        public static bool IsEncryption(string str)
+        {
+            if (str.StartsWith("3."))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+    }
+}
