@@ -220,7 +220,7 @@ namespace CitFileSDK
             Milestone firstMile = GetStartMilestone(citFileName);
             Milestone endMile = GetEndMilestone(citFileName);
 
-            if(firstMile.GetMeter()>endMile.GetMeter())
+            if(firstMile.GetMeter()<endMile.GetMeter())
             {
                 return true;
             }
