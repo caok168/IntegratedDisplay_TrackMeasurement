@@ -275,6 +275,7 @@
     <Compile Include="IICDataManager.cs" />
     <Compile Include="IICDataViewManager.cs" />
     <Compile Include="IICDataReviseMananger.cs" />
+    <Compile Include="IndexManager.cs" />
     <Compile Include="InvalidDataManager.cs" />
     <Compile Include="LabelInfoManager.cs" />
     <Compile Include="ListviewSortHelper\ListViewHelper.cs" />

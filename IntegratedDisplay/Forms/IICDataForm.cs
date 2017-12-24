@@ -44,6 +44,10 @@ namespace IntegratedDisplay.Forms
 
         IICDataManager iicDataManager = new IICDataManager();
 
+        IndexManager indexManager = new IndexManager();
+
+        InvalidDataManager invalidDataManager = new InvalidDataManager();
+
         delegate void SetEnabledCallbackThis(bool value);
 
         public IICDataForm()
@@ -59,6 +63,10 @@ namespace IntegratedDisplay.Forms
 
             citFilePath = waveFormDataList[0].CitFilePath;
             idfFilePath = waveFormDataList[0].WaveIndexFilePath;
+
+            listIndexSta = indexManager.GetDataIndexInfo(idfFilePath);
+
+            listIDC = invalidDataManager.InvalidDataList(idfFilePath);
         }
 
         /// <summary>
