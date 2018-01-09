@@ -120,7 +120,10 @@ namespace IntegratedDisplay
             }
         }
 
-
+        /// <summary>
+        /// 获取配置文件
+        /// </summary>
+        /// <returns></returns>
         public static FormlayoutConfig GetLayoutConfig()
         {
             try
@@ -136,6 +139,10 @@ namespace IntegratedDisplay
             }
         }
 
+        /// <summary>
+        /// 保存配置文件
+        /// </summary>
+        /// <param name="config"></param>
         public static void SaveLayoutConfig(FormlayoutConfig config)
         {
             try

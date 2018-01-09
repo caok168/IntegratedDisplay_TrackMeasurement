@@ -48,6 +48,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 定位按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLocation_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(txtMileage.Text.Trim()))
@@ -82,17 +87,31 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 返回按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 文本变化事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtMileage_TextChanged(object sender, EventArgs e)
         {
             errorProvider.Clear();
         }
 
-
+        /// <summary>
+        /// 键盘事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtMileage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

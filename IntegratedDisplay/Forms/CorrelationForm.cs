@@ -27,6 +27,11 @@ namespace IntegratedDisplay.Forms
             _maker = maker;
         }
 
+        /// <summary>
+        /// 添加按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFileAdd_Click(object sender, EventArgs e)
         {
             openFileDialog.FileName = "";
@@ -39,6 +44,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 删除按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFileDelete_Click(object sender, EventArgs e)
         {
             if(lstCitFiles.SelectedItems.Count>0)
@@ -47,16 +57,31 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 清空按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnClear_Click(object sender, EventArgs e)
         {
             lstCitFiles.Items.Clear();
         }
 
+        /// <summary>
+        /// 返回按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 修正按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnWaveFix_Click(object sender, EventArgs e)
         {
             btnWaveFix.Enabled = false;

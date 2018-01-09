@@ -30,6 +30,11 @@ namespace IntegratedDisplay.Forms
             _maker = maker;
         }
 
+        /// <summary>
+        /// 验证文本事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textAll_Leave(object sender,EventArgs e)
         {
             TextBox txt = sender as TextBox;
@@ -55,6 +60,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 导出按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExport_Click(object sender, EventArgs e)
         {
             startMileage = double.Parse(txtMileStart.Text.Trim()) * 1000;
@@ -151,6 +161,11 @@ namespace IntegratedDisplay.Forms
 
         }
 
+        /// <summary>
+        /// 窗体加载事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExportDataByMileageForm_Load(object sender, EventArgs e)
         {
 
@@ -173,6 +188,11 @@ namespace IntegratedDisplay.Forms
 
         }
 
+        /// <summary>
+        /// 选择cit文件路径
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSelectPath_Click(object sender, EventArgs e)
         {
             
@@ -183,6 +203,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 选择从文件开始位置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ckbIsStart_CheckedChanged(object sender, EventArgs e)
         {
             if(ckbIsStart.Checked)
@@ -195,6 +220,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 选择从文件结束位置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ckbIsEnd_CheckedChanged(object sender, EventArgs e)
         {
             if(ckbIsEnd.Checked)

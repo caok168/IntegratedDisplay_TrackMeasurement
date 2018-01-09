@@ -161,6 +161,9 @@ namespace IntegratedDisplay.Forms
 
         }
 
+        /// <summary>
+        /// 初始化
+        /// </summary>
         private void InitConfigData()
         {
             chartAccumulateCurveData = new ChartConfig();

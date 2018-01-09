@@ -36,6 +36,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 选择切割单位事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxSplitUnit_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvBoundary.Rows.Clear();
@@ -101,6 +106,11 @@ namespace IntegratedDisplay.Forms
             
         }
 
+        /// <summary>
+        /// 导出按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExport_Click(object sender, EventArgs e)
         {
             bool isIndex = false;
@@ -153,6 +163,12 @@ namespace IntegratedDisplay.Forms
 
         }
 
+        /// <summary>
+        /// 导出里程修正索引到cit文件
+        /// </summary>
+        /// <param name="selectedPath"></param>
+        /// <param name="exportPath"></param>
+        /// <param name="count"></param>
         private void ExportCitAndIndex(string selectedPath, List<string> exportPath, int count)
         {
             btnExport.Enabled = false;
@@ -215,6 +231,12 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 只导出cit文件
+        /// </summary>
+        /// <param name="selectedPath"></param>
+        /// <param name="exportPath"></param>
+        /// <param name="count"></param>
         private void ExportOnlyCit(string selectedPath, List<string> exportPath, int count)
         {
             btnExport.Enabled = false;
