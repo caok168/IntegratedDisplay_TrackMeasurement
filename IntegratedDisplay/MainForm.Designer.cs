@@ -868,7 +868,7 @@
             this.tsmiShowBaggingByDrawing.Name = "tsmiShowBaggingByDrawing";
             this.tsmiShowBaggingByDrawing.Size = new System.Drawing.Size(176, 26);
             this.tsmiShowBaggingByDrawing.Text = "显示图像标注";
-            this.tsmiShowBaggingByDrawing.Visible = false;
+            this.tsmiShowBaggingByDrawing.Visible = true;
             this.tsmiShowBaggingByDrawing.Click += new System.EventHandler(this.tsmiShowBaggingByDrawing_Click);
             // 
             // tsmiSetting
