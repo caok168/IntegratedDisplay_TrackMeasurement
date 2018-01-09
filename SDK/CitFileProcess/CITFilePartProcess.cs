@@ -61,10 +61,13 @@ namespace CitFileSDK
                     sbTrackCode.Append(UnicodeEncoding.Default.GetString(bDataInfo, DataHeadOffset.TrackCode + i, 1));
                 }
                 //1+20个字节，线路名
-                for (int i = 1; i <= (int)bDataInfo[DataHeadOffset.TrackName]; i += 2)
-                {
-                    sbTrackName.Append(UnicodeEncoding.Default.GetString(bDataInfo, DataHeadOffset.TrackName + i, 2));
-                }
+                //for (int i = 1; i <= (int)bDataInfo[DataHeadOffset.TrackName]; i += 2)
+                //{
+                //    sbTrackName.Append(UnicodeEncoding.Default.GetString(bDataInfo, DataHeadOffset.TrackName + i, 2));
+                //}
+
+                //一次性读完TrackName域中的内容
+                sbTrackName.Append(UnicodeEncoding.Default.GetString(bDataInfo, DataHeadOffset.TrackName + 1, (int)bDataInfo[DataHeadOffset.TrackName]));
 
                 //检测方向
                 fi.iDir = BitConverter.ToInt32(bDataInfo, DataHeadOffset.Dir);
