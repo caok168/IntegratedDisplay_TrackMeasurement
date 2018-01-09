@@ -37,6 +37,9 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 加载数据
+        /// </summary>
         public void LoadData()
         {
             try
@@ -64,6 +67,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 偏移按钮事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAll_Click(object sender, EventArgs e)
         {
             if (dgvLayerInfo.SelectedRows.Count > 0)
@@ -88,6 +96,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// timer事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer_Tick(object sender, EventArgs e)
         {
             Button btn = new Button();
@@ -138,6 +151,11 @@ namespace IntegratedDisplay.Forms
             
         }
 
+        /// <summary>
+        /// 重置偏移
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsbtnResetOffset_Click(object sender, EventArgs e)
         {
             if (dgvLayerInfo.SelectedRows.Count > 0)
@@ -155,6 +173,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 里程对齐
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsbtnMileageAlignment_Click(object sender, EventArgs e)
         {
             try
@@ -181,6 +204,11 @@ namespace IntegratedDisplay.Forms
             }
         }
 
+        /// <summary>
+        /// 波形对齐
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsbtnWaveAlignment_Click(object sender, EventArgs e)
         {
             if (dgvLayerInfo.SelectedRows.Count > 0)
