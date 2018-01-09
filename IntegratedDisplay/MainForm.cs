@@ -1776,6 +1776,9 @@ namespace IntegratedDisplay
 
         }
 
+        /// <summary>
+        /// 截图功能
+        /// </summary>
         private void CaptureScreen()
         {
             try
@@ -2964,21 +2967,38 @@ namespace IntegratedDisplay
             tsmiExportByMileage_Click(sender, e);
         }
 
+        /// <summary>
+        /// 提示信息
+        /// </summary>
+        /// <param name="text"></param>
         private void ShowOperateInfo(string text)
         {
             tslabelPromptInfo.Text = "提示：" + text;
         }
 
+        /// <summary>
+        /// 显示正在进行文本状态
+        /// </summary>
+        /// <param name="text"></param>
         private void ShowOpenOperateInfo(string text)
         {
             ShowOperateInfo("当前正在进行[" + text + "]");
         }
 
+        /// <summary>
+        /// 显示已关闭信息
+        /// </summary>
+        /// <param name="text"></param>
         private void ShowCloseOperateInfo(string text)
         {
             ShowOperateInfo("已关闭[" + text + "]");
         }
 
+        /// <summary>
+        /// 关于对话框
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiAbout_Click(object sender, EventArgs e)
         {
             AboutBox box = new AboutBox();
